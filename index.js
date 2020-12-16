@@ -37,7 +37,7 @@ for (var i = 0; i < questionsList.length; i++) {
 
 function play(question, answer) {
   var userAns = readlineSync.question(question);
-  if (userAns === answer) {
+  if (userAns.toLowerCase() === answer) {
     console.log(chalk.bold.green("right"));
     score = score + 1;
   } else {
@@ -47,7 +47,3 @@ function play(question, answer) {
 }
 
 console.log(chalk.bold("Congrats!🎉  You Scored ") + chalk.keyword('orange').bold(score) + "!");
-
-
-
-
